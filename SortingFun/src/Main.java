@@ -103,16 +103,16 @@ public class Main {
 		}
 	}
 	public static void quickSort(int[] a) {
-		quickSort(a, 0, a.length);
+		quickSort(a, 0, a.length-1);
 	}
 
 	// helper method
 	private static void quickSort(int[] a, int start, int end) {
 		if (start < end) {
 			//int pivot = start;
-			int midPos = partition(a, start, end-1);
+			int midPos = partition(a, start, end);
 			quickSort(a, start, midPos); // Sort left part
-			quickSort(a, midPos+1, end-1); // Sort right part
+			quickSort(a, midPos+1, end); // Sort right part
 			// Done
 		}
 	}
